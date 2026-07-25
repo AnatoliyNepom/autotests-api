@@ -8,7 +8,6 @@ client_socket.connect(server_address)
 message = "Привет, сервер!"
 client_socket.send(message.encode())
 
-response = client_socket.recv(1024).decode()
-print(f"Ответ от сервера: {response}")
+print(client_socket.recv(1024).decode())
 
 client_socket.close()
