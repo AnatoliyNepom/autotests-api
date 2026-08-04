@@ -1,5 +1,6 @@
 import httpx
 
+
 login_payload = {
   "email": "tony@soprano.com",
   "password": "soprano123"
@@ -10,6 +11,7 @@ login_response_data = login_response.json()
 
 print("Login response data:", login_response_data)
 print("Status Code:", login_response.status_code)
+
 
 refresh_payload = {
     "refreshToken": login_response_data["token"]["refreshToken"]
